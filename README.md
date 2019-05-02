@@ -1,10 +1,10 @@
-# <a name="microsoft-graph-training-module---build-react-single-page-apps-with-microsoft-graph"></a>microsoft graph のトレーニングモジュール-ビルドが1ページのアプリを microsoft graph で反応させる
+# <a name="microsoft-graph-training-module---build-react-single-page-apps-with-microsoft-graph"></a>Microsoft Graph のトレーニングモジュール-ビルドが1ページのアプリを Microsoft Graph で反応させる
 
 このモジュールでは、Microsoft Graph を使用して、Office 365 のデータにアクセスする単一ページアプリケーションの反応を作成する方法を紹介します。
 
 ## <a name="lab---react-single-page-apps-with-the-microsoft-graph"></a>Microsoft Graph を使用した単一ページアプリのラボ対応
 
-このラボでは、Microsoft Graph を使用して Office 365 のデータにアクセスする認証 & 認証用に azure Active Directory (azure AD) で構成された、応答の単一ページアプリケーションを作成します。
+このラボでは、Microsoft Graph を使用して Office 365 のデータにアクセスする認証 & 認証用に Azure Active Directory (Azure AD) で構成された、応答の単一ページアプリケーションを作成します。
 
 - [Microsoft Graph チュートリアルを反応する](https://docs.microsoft.com/graph/training/react-tutorial)
 
