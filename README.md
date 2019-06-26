@@ -4,7 +4,7 @@
 
 ## <a name="lab---react-single-page-apps-with-the-microsoft-graph"></a>Microsoft Graph を使用した単一ページアプリのラボ対応
 
-このラボでは、Microsoft Graph を使用して Office 365 のデータにアクセスする認証 & 認証用に Azure Active Directory (Azure AD) で構成された、応答の単一ページアプリケーションを作成します。
+このラボでは、Microsoft Graph を使用して Office 365 内のデータにアクセスする認証 & 承認のために、Azure Active Directory (Azure AD) で構成される、応答の単一ページアプリケーションを作成します。
 
 - [Microsoft Graph チュートリアルを反応する](https://docs.microsoft.com/graph/training/react-tutorial)
 
@@ -21,6 +21,31 @@
 このラボをフォローすることで完成したサンプルを生成する場合は、ここで見つけることができます。
 
 - [完了したプロジェクト](demos/03-add-msgraph)
+
+## <a name="watch-the-module"></a>モジュールを見る
+
+このモジュールは、次のように記録されており、Office 開発の YouTube チャネルで利用できます。「 [Microsoft Graph での SPAs しての](https://youtu.be/IghiKqly-HY)機能の組み込み」
+
+## <a name="contributors"></a>多様
+
+|           ロール           |                                           作成者 (s)                                           |
+| ------------------------- | --------------------------------------------------------------------------------------------- |
+| コード/チュートリアル/サポート | Jason ジョンストン (Microsoft) [@jasonjoh](//github.com/jasonjoh)                                 |
+| Slides                    | Jeremy Thake (Microsoft) [@jthake-msft](//github.com/jthake-msft)                             |
+| QA                        | Andrew Connell (Microsoft MVP、Voitanos) [@andrewconnell](//github.com/andrewconnell)         |
+| QA                        | ジュリー Turner (Microsoft MVP、Sympraxis コンサルティング) [@juliemturner](//github.com/juliemturner) |
+
+## <a name="version-history"></a>バージョン履歴
+
+| バージョン |       日付       |              コメント              |
+| ------- | ---------------- | ---------------------------------- |
+| 1.6     | 2019年6月18日    | Screencast レコーディングへのリンクを追加しました |
+| 1.5     | 2019年5月24日     | 2019Q4 コンテンツの更新             |
+| 1.4     | 2019年5月22日     | クイックスタートの更新プログラム                 |
+| 1.3     | 2019年5月16時     | AAD アプリの登録手順を更新しました |
+| 1.2     | 2019年3月6日    | 2019Q3 コンテンツの更新             |
+| 1.1     | 2019年2月8日 | 追加されたスライド                       |
+| 1.0     | 2018             | Published                          |
 
 ## <a name="disclaimer"></a>免責事項
 
