@@ -1,40 +1,40 @@
 <!-- markdownlint-disable MD002 MD041 -->
 
-<span data-ttu-id="82856-101">コマンドラインインターフェイス (CLI) を開き、ファイルを作成する権限があるディレクトリに移動し、次のコマンドを実行して、[アプリの作成](https://www.npmjs.com/package/create-react-app)ツールをインストールし、新しい反応アプリを作成します。</span><span class="sxs-lookup"><span data-stu-id="82856-101">Open your command-line interface (CLI), navigate to a directory where you have rights to create files, and run the following commands to install the [create-react-app](https://www.npmjs.com/package/create-react-app) tool and create a new React app.</span></span>
+<span data-ttu-id="75925-101">コマンドラインインターフェイス (CLI) を開き、ファイルを作成する権限があるディレクトリに移動し、次のコマンドを実行して、[アプリの作成](https://www.npmjs.com/package/create-react-app)ツールをインストールし、新しい反応アプリを作成します。</span><span class="sxs-lookup"><span data-stu-id="75925-101">Open your command-line interface (CLI), navigate to a directory where you have rights to create files, and run the following commands to install the [create-react-app](https://www.npmjs.com/package/create-react-app) tool and create a new React app.</span></span>
 
 ```Shell
 npm install create-react-app@3.1.1 -g
 create-react-app graph-tutorial
 ```
 
-<span data-ttu-id="82856-102">コマンドが完了したら、CLI の`graph-tutorial`ディレクトリに移動し、次のコマンドを実行してローカル web サーバーを開始します。</span><span class="sxs-lookup"><span data-stu-id="82856-102">Once the command finishes, change to the `graph-tutorial` directory in your CLI and run the following command to start a local web server.</span></span>
+<span data-ttu-id="75925-102">コマンドが完了したら、CLI の`graph-tutorial`ディレクトリに移動し、次のコマンドを実行してローカル web サーバーを開始します。</span><span class="sxs-lookup"><span data-stu-id="75925-102">Once the command finishes, change to the `graph-tutorial` directory in your CLI and run the following command to start a local web server.</span></span>
 
 ```Shell
 npm start
 ```
 
-<span data-ttu-id="82856-103">既定のブラウザーが開き[https://localhost:3000/](https://localhost:3000) 、既定の反応ページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="82856-103">Your default browser opens to [https://localhost:3000/](https://localhost:3000) with a default React page.</span></span> <span data-ttu-id="82856-104">ブラウザーが開かない場合は、それを開き、 [https://localhost:3000/](https://localhost:3000)を参照して、新しいアプリが動作することを確認します。</span><span class="sxs-lookup"><span data-stu-id="82856-104">If your browser doesn't open, open it and browse to [https://localhost:3000/](https://localhost:3000) to verify that the new app works.</span></span>
+<span data-ttu-id="75925-103">既定のブラウザーが開き[https://localhost:3000/](https://localhost:3000) 、既定の反応ページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="75925-103">Your default browser opens to [https://localhost:3000/](https://localhost:3000) with a default React page.</span></span> <span data-ttu-id="75925-104">ブラウザーが開かない場合は、それを開き、 [https://localhost:3000/](https://localhost:3000)を参照して、新しいアプリが動作することを確認します。</span><span class="sxs-lookup"><span data-stu-id="75925-104">If your browser doesn't open, open it and browse to [https://localhost:3000/](https://localhost:3000) to verify that the new app works.</span></span>
 
-<span data-ttu-id="82856-105">に進む前に、後で使用する追加のパッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="82856-105">Before moving on, install some additional packages that you will use later:</span></span>
+<span data-ttu-id="75925-105">に進む前に、後で使用する追加のパッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="75925-105">Before moving on, install some additional packages that you will use later:</span></span>
 
-- <span data-ttu-id="82856-106">応答アプリケーション内の宣言型ルーティングのための[ルーター-dom](https://github.com/ReactTraining/react-router)を処理します。</span><span class="sxs-lookup"><span data-stu-id="82856-106">[react-router-dom](https://github.com/ReactTraining/react-router) for declarative routing inside the React app.</span></span>
-- <span data-ttu-id="82856-107">スタイル設定と共通コンポーネントの[ブートストラップ](https://github.com/twbs/bootstrap)。</span><span class="sxs-lookup"><span data-stu-id="82856-107">[bootstrap](https://github.com/twbs/bootstrap) for styling and common components.</span></span>
-- <span data-ttu-id="82856-108">ブートストラップに基づくコンポーネントに対応するための[reactstrap](https://github.com/reactstrap/reactstrap) 。</span><span class="sxs-lookup"><span data-stu-id="82856-108">[reactstrap](https://github.com/reactstrap/reactstrap) for React components based on Bootstrap.</span></span>
-- <span data-ttu-id="82856-109">アイコンの[fontawesome](https://github.com/FortAwesome/Font-Awesome) 。</span><span class="sxs-lookup"><span data-stu-id="82856-109">[fontawesome-free](https://github.com/FortAwesome/Font-Awesome) for icons.</span></span>
-- <span data-ttu-id="82856-110">日付と時刻を書式設定するための[モーメント](https://github.com/moment/moment)。</span><span class="sxs-lookup"><span data-stu-id="82856-110">[moment](https://github.com/moment/moment) for formatting dates and times.</span></span>
-- <span data-ttu-id="82856-111">Azure Active Directory に認証し、アクセストークンを取得するための[msal](https://github.com/AzureAD/microsoft-authentication-library-for-js) 。</span><span class="sxs-lookup"><span data-stu-id="82856-111">[msal](https://github.com/AzureAD/microsoft-authentication-library-for-js) for authenticating to Azure Active Directory and retrieving access tokens.</span></span>
-- <span data-ttu-id="82856-112">[microsoft graph-](https://github.com/microsoftgraph/msgraph-sdk-javascript) microsoft graph に電話をかけるためのクライアントです。</span><span class="sxs-lookup"><span data-stu-id="82856-112">[microsoft-graph-client](https://github.com/microsoftgraph/msgraph-sdk-javascript) for making calls to Microsoft Graph.</span></span>
+- <span data-ttu-id="75925-106">応答アプリケーション内の宣言型ルーティングのための[ルーター-dom](https://github.com/ReactTraining/react-router)を処理します。</span><span class="sxs-lookup"><span data-stu-id="75925-106">[react-router-dom](https://github.com/ReactTraining/react-router) for declarative routing inside the React app.</span></span>
+- <span data-ttu-id="75925-107">スタイル設定と共通コンポーネントの[ブートストラップ](https://github.com/twbs/bootstrap)。</span><span class="sxs-lookup"><span data-stu-id="75925-107">[bootstrap](https://github.com/twbs/bootstrap) for styling and common components.</span></span>
+- <span data-ttu-id="75925-108">ブートストラップに基づくコンポーネントに対応するための[reactstrap](https://github.com/reactstrap/reactstrap) 。</span><span class="sxs-lookup"><span data-stu-id="75925-108">[reactstrap](https://github.com/reactstrap/reactstrap) for React components based on Bootstrap.</span></span>
+- <span data-ttu-id="75925-109">アイコンの[fontawesome](https://github.com/FortAwesome/Font-Awesome) 。</span><span class="sxs-lookup"><span data-stu-id="75925-109">[fontawesome-free](https://github.com/FortAwesome/Font-Awesome) for icons.</span></span>
+- <span data-ttu-id="75925-110">日付と時刻を書式設定するための[モーメント](https://github.com/moment/moment)。</span><span class="sxs-lookup"><span data-stu-id="75925-110">[moment](https://github.com/moment/moment) for formatting dates and times.</span></span>
+- <span data-ttu-id="75925-111">Azure Active Directory に認証し、アクセストークンを取得するための[msal](https://github.com/AzureAD/microsoft-authentication-library-for-js) 。</span><span class="sxs-lookup"><span data-stu-id="75925-111">[msal](https://github.com/AzureAD/microsoft-authentication-library-for-js) for authenticating to Azure Active Directory and retrieving access tokens.</span></span>
+- <span data-ttu-id="75925-112">[microsoft graph-](https://github.com/microsoftgraph/msgraph-sdk-javascript) microsoft graph に電話をかけるためのクライアントです。</span><span class="sxs-lookup"><span data-stu-id="75925-112">[microsoft-graph-client](https://github.com/microsoftgraph/msgraph-sdk-javascript) for making calls to Microsoft Graph.</span></span>
 
-<span data-ttu-id="82856-113">CLI で次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="82856-113">Run the following command in your CLI.</span></span>
+<span data-ttu-id="75925-113">CLI で次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="75925-113">Run the following command in your CLI.</span></span>
 
 ```Shell
-npm install react-router-dom@5.0.1 bootstrap@4.3.1 reactstrap@8.0.1 @fortawesome/fontawesome-free@5.10.2
-npm install moment@2.24.0 msal@1.1.3 @microsoft/microsoft-graph-client@1.7.0
+npm install react-router-dom@5.1.2 bootstrap@4.4.1 reactstrap@8.1.1 @fortawesome/fontawesome-free@5.11.2
+npm install moment@2.24.0 msal@1.1.3 @microsoft/microsoft-graph-client@2.0.0
 ```
 
-## <a name="design-the-app"></a><span data-ttu-id="82856-114">アプリを設計する</span><span class="sxs-lookup"><span data-stu-id="82856-114">Design the app</span></span>
+## <a name="design-the-app"></a><span data-ttu-id="75925-114">アプリを設計する</span><span class="sxs-lookup"><span data-stu-id="75925-114">Design the app</span></span>
 
-<span data-ttu-id="82856-115">最初に、アプリのナビゲーションバーを作成します。</span><span class="sxs-lookup"><span data-stu-id="82856-115">Start by creating a navbar for the app.</span></span> <span data-ttu-id="82856-116">という名前`./src` `Navbar.js`のディレクトリに新しいファイルを作成し、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="82856-116">Create a new file in the `./src` directory named `Navbar.js` and add the following code.</span></span>
+<span data-ttu-id="75925-115">最初に、アプリのナビゲーションバーを作成します。</span><span class="sxs-lookup"><span data-stu-id="75925-115">Start by creating a navbar for the app.</span></span> <span data-ttu-id="75925-116">という名前`./src` `NavBar.js`のディレクトリに新しいファイルを作成し、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="75925-116">Create a new file in the `./src` directory named `NavBar.js` and add the following code.</span></span>
 
 ```JSX
 import React from 'react';
@@ -157,7 +157,7 @@ export default class NavBar extends React.Component {
 }
 ```
 
-<span data-ttu-id="82856-117">次に、アプリのホームページを作成します。</span><span class="sxs-lookup"><span data-stu-id="82856-117">Next, create a home page for the app.</span></span> <span data-ttu-id="82856-118">という名前`./src` `Welcome.js`のディレクトリに新しいファイルを作成し、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="82856-118">Create a new file in the `./src` directory named `Welcome.js` and add the following code.</span></span>
+<span data-ttu-id="75925-117">次に、アプリのホームページを作成します。</span><span class="sxs-lookup"><span data-stu-id="75925-117">Next, create a home page for the app.</span></span> <span data-ttu-id="75925-118">という名前`./src` `Welcome.js`のディレクトリに新しいファイルを作成し、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="75925-118">Create a new file in the `./src` directory named `Welcome.js` and add the following code.</span></span>
 
 ```JSX
 import React from 'react';
@@ -198,7 +198,7 @@ export default class Welcome extends React.Component {
 }
 ```
 
-<span data-ttu-id="82856-119">次に、エラーメッセージ表示を作成して、ユーザーにメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="82856-119">Now create an error message display to display messages to the user.</span></span> <span data-ttu-id="82856-120">という名前`./src` `ErrorMessage.js`のディレクトリに新しいファイルを作成し、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="82856-120">Create a new file in the `./src` directory named `ErrorMessage.js` and add the following code.</span></span>
+<span data-ttu-id="75925-119">次に、エラーメッセージ表示を作成して、ユーザーにメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="75925-119">Now create an error message display to display messages to the user.</span></span> <span data-ttu-id="75925-120">という名前`./src` `ErrorMessage.js`のディレクトリに新しいファイルを作成し、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="75925-120">Create a new file in the `./src` directory named `ErrorMessage.js` and add the following code.</span></span>
 
 ```JSX
 import React from 'react';
@@ -220,7 +220,7 @@ export default class ErrorMessage extends React.Component {
 }
 ```
 
-<span data-ttu-id="82856-121">これらの基本コンポーネントが定義されたので、アプリを更新して使用します。</span><span class="sxs-lookup"><span data-stu-id="82856-121">Now with those basic components defined, update the app to use them.</span></span> <span data-ttu-id="82856-122">最初に、 `./src/index.css`ファイルを開き、その内容全体を次のように置き換えます。</span><span class="sxs-lookup"><span data-stu-id="82856-122">First, open the `./src/index.css` file and replace its entire contents with the following.</span></span>
+<span data-ttu-id="75925-121">これらの基本コンポーネントが定義されたので、アプリを更新して使用します。</span><span class="sxs-lookup"><span data-stu-id="75925-121">Now with those basic components defined, update the app to use them.</span></span> <span data-ttu-id="75925-122">最初に、 `./src/index.css`ファイルを開き、その内容全体を次のように置き換えます。</span><span class="sxs-lookup"><span data-stu-id="75925-122">First, open the `./src/index.css` file and replace its entire contents with the following.</span></span>
 
 ```css
 body {
@@ -234,7 +234,7 @@ body {
 }
 ```
 
-<span data-ttu-id="82856-123">次に、 `./src/App.js`を開いて、コンテンツ全体を次のように置き換えます。</span><span class="sxs-lookup"><span data-stu-id="82856-123">Next, open `./src/App.js` and replace its entire contents with the following.</span></span>
+<span data-ttu-id="75925-123">次に、 `./src/App.js`を開いて、コンテンツ全体を次のように置き換えます。</span><span class="sxs-lookup"><span data-stu-id="75925-123">Next, open `./src/App.js` and replace its entire contents with the following.</span></span>
 
 ```JSX
 import React, { Component } from 'react';
@@ -294,6 +294,6 @@ class App extends Component {
 export default App;
 ```
 
-<span data-ttu-id="82856-124">すべての変更を保存し、ページを更新します。</span><span class="sxs-lookup"><span data-stu-id="82856-124">Save all of your changes and refresh the page.</span></span> <span data-ttu-id="82856-125">この時点で、アプリの外観は大きく異なります。</span><span class="sxs-lookup"><span data-stu-id="82856-125">Now, the app should look very different.</span></span>
+<span data-ttu-id="75925-124">すべての変更を保存し、ページを更新します。</span><span class="sxs-lookup"><span data-stu-id="75925-124">Save all of your changes and refresh the page.</span></span> <span data-ttu-id="75925-125">この時点で、アプリの外観は大きく異なります。</span><span class="sxs-lookup"><span data-stu-id="75925-125">Now, the app should look very different.</span></span>
 
 ![再設計されたホームページのスクリーンショット](images/create-app-01.png)
