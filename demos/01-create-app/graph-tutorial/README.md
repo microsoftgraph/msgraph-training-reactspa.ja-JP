@@ -6,23 +6,23 @@
 
 ### `npm start`
 
-開発モードでアプリを実行します。<br>
+開発モードでアプリを実行します。<br />
 [ [http://localhost:3000](http://localhost:3000)開く] をブラウザーで表示します。
 
-編集を行った場合は、ページが再読み込みされます。<br>
+編集を行った場合は、ページが再読み込みされます。<br />
 また、コンソールには、柔らかいエラーも表示されます。
 
 ### `npm test`
 
-対話式ウォッチモードでテストランナーを起動します。<br>
+対話式ウォッチモードでテストランナーを起動します。<br />
 詳細については、「[テストの実行](https://facebook.github.io/create-react-app/docs/running-tests)に関するセクション」を参照してください。
 
 ### `npm run build`
 
-`build`フォルダーに本番用アプリを作成します。<br>
+`build`フォルダーに本番用アプリを作成します。<br />
 運用モードに反応し、最適なパフォーマンスを得るためにビルドを最適化することが適切に行われます。
 
-ビルドは縮小され、ファイル名にはハッシュが含まれます。<br>
+ビルドは縮小され、ファイル名にはハッシュが含まれます。<br />
 アプリを展開する準備ができました。
 
 詳細については、「[展開](https://facebook.github.io/create-react-app/docs/deployment)について」を参照してください。
@@ -42,3 +42,27 @@
 詳細については、「アプリの動作に[関するドキュメントを作成](https://facebook.github.io/create-react-app/docs/getting-started)する」を参照してください。
 
 対処方法については、対応に[関するドキュメント](https://reactjs.org/)をご覧ください。
+
+### <a name="code-splitting"></a>コード分割
+
+このセクションは、次の場所に移動しました。https://facebook.github.io/create-react-app/docs/code-splitting
+
+### <a name="analyzing-the-bundle-size"></a>バンドルサイズの分析
+
+このセクションは、次の場所に移動しました。https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### <a name="making-a-progressive-web-app"></a>プログレッシブ Web アプリの作成
+
+このセクションは、次の場所に移動しました。https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### <a name="advanced-configuration"></a>詳細な構成
+
+このセクションは、次の場所に移動しました。https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### <a name="deployment"></a>展開
+
+このセクションは、次の場所に移動しました。https://facebook.github.io/create-react-app/docs/deployment
+
+### <a name="npm-run-build-fails-to-minify"></a>`npm run build`この関数は失敗します。
+
+このセクションは、次の場所に移動しました。https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

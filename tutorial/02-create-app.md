@@ -28,13 +28,13 @@ npm start
 CLI で次のコマンドを実行します。
 
 ```Shell
-npm install react-router-dom@5.0.1 bootstrap@4.3.1 reactstrap@8.0.1 @fortawesome/fontawesome-free@5.10.2
-npm install moment@2.24.0 msal@1.1.3 @microsoft/microsoft-graph-client@1.7.0
+npm install react-router-dom@5.1.2 bootstrap@4.4.1 reactstrap@8.1.1 @fortawesome/fontawesome-free@5.11.2
+npm install moment@2.24.0 msal@1.1.3 @microsoft/microsoft-graph-client@2.0.0
 ```
 
 ## <a name="design-the-app"></a>アプリを設計する
 
-最初に、アプリのナビゲーションバーを作成します。 という名前`./src` `Navbar.js`のディレクトリに新しいファイルを作成し、次のコードを追加します。
+最初に、アプリのナビゲーションバーを作成します。 という名前`./src` `NavBar.js`のディレクトリに新しいファイルを作成し、次のコードを追加します。
 
 ```JSX
 import React from 'react';
