@@ -5,16 +5,16 @@
 1. コマンドラインインターフェイス (CLI) を開き、ファイルを作成する権限があるディレクトリに移動し、次のコマンドを実行して新しい反応アプリを作成します。
 
     ```Shell
-    npx create-react-app@3.4.0 graph-tutorial --template typescript
+    npx create-react-app@3.4.1 graph-tutorial --template typescript
     ```
 
-1. コマンドが完了したら、CLI の`graph-tutorial`ディレクトリに移動し、次のコマンドを実行してローカル web サーバーを開始します。
+1. コマンドが完了したら、 `graph-tutorial` CLI のディレクトリに移動し、次のコマンドを実行してローカル web サーバーを開始します。
 
     ```Shell
     npm start
     ```
 
-既定のブラウザーが開き[https://localhost:3000/](https://localhost:3000) 、既定の反応ページが表示されます。 ブラウザーが開かない場合は、それを開き、 [https://localhost:3000/](https://localhost:3000)を参照して、新しいアプリが動作することを確認します。
+既定のブラウザーが開き、既定の反応ページが表示さ [https://localhost:3000/](https://localhost:3000) れます。 ブラウザーが開かない場合は、それを開き、を参照して [https://localhost:3000/](https://localhost:3000) 、新しいアプリが動作することを確認します。
 
 ## <a name="add-node-packages"></a>ノードパッケージを追加する
 
@@ -25,29 +25,30 @@
 - ブートストラップに基づくコンポーネントに対応するための[reactstrap](https://github.com/reactstrap/reactstrap) 。
 - アイコンの[fontawesome](https://github.com/FortAwesome/Font-Awesome) 。
 - 日付と時刻を書式設定するための[モーメント](https://github.com/moment/moment)。
-- Azure Active Directory に認証し、アクセストークンを取得するための[msal](https://github.com/AzureAD/microsoft-authentication-library-for-js) 。
+- windows のタイムゾーンを IANA 形式に変換するための[windows の iana](https://github.com/rubenillodo/windows-iana) 。
+- [msal-](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-browser) Azure Active Directory を認証し、アクセストークンを取得するためのブラウザー。
 - [microsoft graph-](https://github.com/microsoftgraph/msgraph-sdk-javascript) microsoft graph に電話をかけるためのクライアントです。
 
 CLI で次のコマンドを実行します。
 
 ```Shell
-npm install react-router-dom@5.1.2 @types/react-router-dom@5.1.3 bootstrap@4.4.1 reactstrap@8.4.1 @types/reactstrap@8.4.2
-npm install @fortawesome/fontawesome-free@5.12.1 moment@2.24.0 msal@1.2.1 @microsoft/microsoft-graph-client@2.0.0 @types/microsoft-graph@1.12.0
+npm install react-router-dom@5.2.0 @types/react-router-dom@5.1.5 bootstrap@4.5.2 reactstrap@8.5.1 @types/reactstrap@8.5.1 @fortawesome/fontawesome-free@5.14.0
+npm install moment@2.27.0 moment-timezone@0.5.31 windows-iana@4.2.1 @azure/msal-browser@2.1.0 @microsoft/microsoft-graph-client@2.0.0 @types/microsoft-graph@1.18.0
 ```
 
 ## <a name="design-the-app"></a>アプリを設計する
 
 最初に、アプリのナビゲーションバーを作成します。
 
-1. という名前`./src` `NavBar.tsx`のディレクトリに新しいファイルを作成し、次のコードを追加します。
+1. という名前のディレクトリに新しいファイルを作成 `./src` `NavBar.tsx` し、次のコードを追加します。
 
     :::code language="typescript" source="../demo/graph-tutorial/src/NavBar.tsx" id="NavBarSnippet":::
 
-1. アプリのホームページを作成します。 という名前`./src` `Welcome.tsx`のディレクトリに新しいファイルを作成し、次のコードを追加します。
+1. アプリのホームページを作成します。 という名前のディレクトリに新しいファイルを作成 `./src` `Welcome.tsx` し、次のコードを追加します。
 
     :::code language="typescript" source="../demo/graph-tutorial/src/Welcome.tsx" id="WelcomeSnippet":::
 
-1. エラーメッセージ表示を作成して、ユーザーにメッセージを表示します。 という名前`./src` `ErrorMessage.tsx`のディレクトリに新しいファイルを作成し、次のコードを追加します。
+1. エラーメッセージ表示を作成して、ユーザーにメッセージを表示します。 という名前のディレクトリに新しいファイルを作成 `./src` `ErrorMessage.tsx` し、次のコードを追加します。
 
     :::code language="typescript" source="../demo/graph-tutorial/src/ErrorMessage.tsx" id="ErrorMessageSnippet":::
 
@@ -55,7 +56,7 @@ npm install @fortawesome/fontawesome-free@5.12.1 moment@2.24.0 msal@1.2.1 @micro
 
     :::code language="css" source="../demo/graph-tutorial/src/index.css":::
 
-1. を`./src/App.tsx`開き、内容全体を次のように置き換えます。
+1. `./src/App.tsx`を開き、内容全体を次のように置き換えます。
 
     ```typescript
     import React, { Component } from 'react';
