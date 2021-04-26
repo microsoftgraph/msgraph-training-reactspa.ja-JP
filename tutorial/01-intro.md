@@ -1,22 +1,22 @@
 <!-- markdownlint-disable MD002 MD041 -->
 
-このチュートリアルでは、Microsoft Graph API を使用してユーザーの予定表情報を取得する React シングルページ アプリを作成する方法について説明します。
+このチュートリアルでは、Microsoft React API を使用してユーザーの予定表情報を取得する Graph ページ アプリを作成する方法について説明します。
 
 > [!TIP]
-> 完成したチュートリアルをダウンロードするだけの場合は [、GitHub](https://github.com/microsoftgraph/msgraph-training-reactspa)リポジトリをダウンロードまたは複製できます。
+> 完了したチュートリアルをダウンロードする場合は、リポジトリをダウンロードまたは複製GitHub[できます](https://github.com/microsoftgraph/msgraph-training-reactspa)。
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルを開始する前に、開発用 [Node.js](https://nodejs.org) にインストールする必要があります。 ダウンロード オプションがない場合Node.jsダウンロード オプションについては、前のリンクを参照してください。
+このチュートリアルを開始する前に、開発[](https://nodejs.org)Node.js[と Yarn](https://classic.yarnpkg.com/)がインストールされている必要があります。 ファイルまたは Yarn がNode.jsダウンロード オプションについては、前のリンクを参照してください。
 
-また、メールボックスを持つ個人用の Microsoft アカウントが Outlook.com Microsoft の仕事用アカウントまたは学校アカウントである必要があります。 Microsoft アカウントをお持ちない場合は、無料アカウントを取得するためのオプションが 2 つ提供されています。
+また、Outlook.com 上のメールボックスを持つ個人用 Microsoft アカウント、または Microsoft の仕事用または学校用のアカウントを持っている必要があります。 Microsoft アカウントをお持ちでない場合は、無料アカウントを取得するためのオプションが 2 つご利用できます。
 
 - 新しい [個人用 Microsoft アカウントにサインアップできます](https://signup.live.com/signup?wa=wsignin1.0&rpsnv=12&ct=1454618383&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https://mail.live.com/default.aspx&id=64855&cbcxt=mai&bk=1454618383&uiflavor=web&uaid=b213a65b4fdc484382b6622b3ecaa547&mkt=E-US&lc=1033&lic=1)。
-- Office [365 開発者プログラムにサインアップして、365](https://developer.microsoft.com/office/dev-program) サブスクリプションを無料Office取得できます。
+- 開発者プログラム[にサインアップしてOffice 365無料](https://developer.microsoft.com/office/dev-program)のサブスクリプションをOffice 365できます。
 
 > [!NOTE]
-> このチュートリアルは、ノード バージョン 14.15.0 で記述されています。 このガイドの手順は他のバージョンでも動作する可能性がありますが、テストは行ってはいではありません。
+> このチュートリアルは、ノード バージョン 14.15.0 と Yarn バージョン 1.22.10 で記述されています。 このガイドの手順は、他のバージョンでも動作しますが、テストされていない場合があります。
 
 ## <a name="feedback"></a>フィードバック
 
-このチュートリアルに関するフィードバックは [、GitHub リポジトリで提供してください](https://github.com/microsoftgraph/msgraph-training-reactspa)。
+このチュートリアルに関するフィードバックは、GitHub[してください](https://github.com/microsoftgraph/msgraph-training-reactspa)。

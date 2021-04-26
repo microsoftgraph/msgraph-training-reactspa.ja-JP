@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD002 MD041 -->
 
-この演習では、Microsoft Graph をアプリケーションに組み込む必要があります。 このアプリケーションでは [、microsoft-graph-client ライブラリ](https://github.com/microsoftgraph/msgraph-sdk-javascript) を使用して Microsoft Graph を呼び出します。
+この演習では、アプリケーションに Microsoft Graphを組み込む必要があります。 このアプリケーションでは[、microsoft-graph-client ライブラリ](https://github.com/microsoftgraph/msgraph-sdk-javascript)を使用して Microsoft Graph。
 
 ## <a name="get-calendar-events-from-outlook"></a>Outlook からカレンダー イベントを取得する
 
@@ -11,21 +11,21 @@
     このコードの実行内容を考えましょう。
 
     - 呼び出される URL は `/me/calendarview` です。
-    - このメソッドは要求にヘッダーを追加し、応答の時間がユーザーの優先タイム ゾーン `header` `Prefer: outlook.timezone=""` に入っています。
-    - この `query` メソッドは、 `startDateTime` カレンダー ビュー `endDateTime` の時間のウィンドウを定義するパラメーターとパラメーターを追加します。
-    - この `select` メソッドは、各イベントで返されるフィールドを、ビューが実際に使用するフィールドに制限します。
-    - このメソッドは、作成された日付と時刻で結果を並べ替え、最新のアイテム `orderby` が最初に表示されます。
+    - このメソッドは、要求にヘッダーを追加し、応答の時間がユーザーの優先タイム ゾーン `header` `Prefer: outlook.timezone=""` に入る原因です。
+    - メソッド `query` は、カレンダー ビューの時間ウィンドウを定義するパラメーター `startDateTime` `endDateTime` とパラメーターを追加します。
+    - メソッド `select` は、各イベントに返されるフィールドを、ビューが実際に使用するフィールドに制限します。
+    - このメソッドは、作成された日付と時刻で結果を並べ替え、最新のアイテム `orderby` を最初に並べ替える。
     - この `top` メソッドは、1 ページの結果を 25 イベントに制限します。
-    - 応答に使用可能な結果が多くあることを示す値が含まれている場合は、オブジェクトを使用してコレクションをページ移動し、すべての結果 `@odata.nextLink` `PageIterator` を取得します。 [](https://docs.microsoft.com/graph/sdks/paging?tabs=typeScript)
+    - 応答に値が含まれている場合は、使用可能な結果が多くあることを示すオブジェクトを使用して、コレクションをページ移動してすべての結果 `@odata.nextLink` `PageIterator` を取得します。 [](https://docs.microsoft.com/graph/sdks/paging?tabs=typeScript)
 
-1. React コンポーネントを作成して、呼び出しの結果を表示します。 ディレクトリに新しいファイルを `./src` 作成し、 `Calendar.tsx` 次のコードを追加します。
+1. 呼び出React結果を表示するコンポーネントを作成します。 という名前のディレクトリに新しい `./src` ファイルを作成 `Calendar.tsx` し、次のコードを追加します。
 
     ```typescript
     import React from 'react';
     import { NavLink as RouterNavLink } from 'react-router-dom';
     import { Table } from 'reactstrap';
     import moment, { Moment } from 'moment-timezone';
-    import { findOneIana } from "windows-iana";
+    import { findIana } from "windows-iana";
     import { Event } from 'microsoft-graph';
     import { config } from './Config';
     import { getUserWeekCalendar } from './GraphService';
@@ -58,12 +58,12 @@
             // Convert user's Windows time zone ("Pacific Standard Time")
             // to IANA format ("America/Los_Angeles")
             // Moment needs IANA format
-            var ianaTimeZone = findOneIana(this.props.user.timeZone);
+            var ianaTimeZones = findIana(this.props.user.timeZone);
 
             // Get midnight on the start of the current week in the user's timezone,
             // but in UTC. For example, for Pacific Standard Time, the time value would be
             // 07:00:00Z
-            var startOfWeek = moment.tz(ianaTimeZone!.valueOf()).startOf('week').utc();
+            var startOfWeek = moment.tz(ianaTimeZones![0].valueOf()).startOf('week').utc();
 
             // Get the user's events
             var events = await getUserWeekCalendar(accessToken, this.props.user.timeZone, startOfWeek);
@@ -91,9 +91,9 @@
     export default withAuthProvider(Calendar);
     ```
 
-    ここでは、JSON でイベントの配列をページにレンダリングします。
+    今のところ、これはページ上の JSON でイベントの配列をレンダリングします。
 
-1. この新しいコンポーネントをアプリに追加します。 次 `./src/App.tsx` のステートメントを `import` 開き、ファイルの一番上に追加します。
+1. この新しいコンポーネントをアプリに追加します。 次 `./src/App.tsx` のステートメントを開 `import` き、ファイルの上部に追加します。
 
     ```typescript
     import Calendar from './Calendar';
@@ -110,17 +110,17 @@
       } />
     ```
 
-1. 変更内容を保存し、アプリを再起動します。 サインインし、ナビゲーション バー **の [予定表** ] リンクをクリックします。 すべてが正常に機能していれば、ユーザーのカレンダーにイベントの JSON ダンプが表示されます。
+1. 変更内容を保存し、アプリを再起動します。 サインインして、ナビゲーション バー **の [予定表** ] リンクをクリックします。 すべてが正常に機能していれば、ユーザーのカレンダーにイベントの JSON ダンプが表示されます。
 
 ## <a name="display-the-results"></a>結果の表示
 
-これで、コンポーネントを `Calendar` 更新して、より使い分け的な方法でイベントを表示できます。
+これで、コンポーネントを更新 `Calendar` して、よりユーザーフレンドリーな方法でイベントを表示できます。
 
-1. ディレクトリに新しいファイルを `./src` 作成し、 `Calendar.css` 次のコードを追加します。
+1. という名前のディレクトリに新しい `./src` ファイルを作成 `Calendar.css` し、次のコードを追加します。
 
     :::code language="css" source="../demo/graph-tutorial/src/Calendar.css":::
 
-1. テーブルの行として 1 日でイベントをレンダリングする React コンポーネントを作成します。 ディレクトリに新しいファイルを `./src` 作成し、 `CalendarDayRow.tsx` 次のコードを追加します。
+1. 1 日Reactテーブル行としてレンダリングするイベント コンポーネントを作成します。 という名前のディレクトリに新しい `./src` ファイルを作成 `CalendarDayRow.tsx` し、次のコードを追加します。
 
     :::code language="typescript" source="../demo/graph-tutorial/src/CalendarDayRow.tsx" id="CalendarDayRowSnippet":::
 
@@ -137,6 +137,6 @@
 
     これにより、イベントがそれぞれの日に分割され、各日のテーブル セクションがレンダリングされます。
 
-1. 変更を保存し、アプリを再起動します。 [カレンダー] **リンクを** クリックすると、アプリはイベントのテーブルをレンダリングする必要があります。
+1. 変更を保存し、アプリを再起動します。 [予定表] **リンクをクリック** すると、アプリはイベントのテーブルを表示する必要があります。
 
     ![イベント表のスクリーンショット](./images/add-msgraph-01.png)
